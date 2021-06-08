@@ -46,6 +46,8 @@ ccache -z # Clear old stats, so monitor script will provide real ccache statisti
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
 
 # Let's compile by parts! Coz of ram issue!
+source build/envsetup.sh
+lunch lineage_mido-user
 make sepolicy || echo no problem
 make bootimage || echo no problem
 make init || echo no problem
