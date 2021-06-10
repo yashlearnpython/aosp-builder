@@ -3,7 +3,7 @@ cd /tmp/rom # Depends on where source got synced
 
 # Normal build steps
 . build/envsetup.sh
-lunch lineage_mido-user
+lunch p404_mido-user
 #export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -46,9 +46,10 @@ ccache -z # Clear old stats, so monitor script will provide real ccache statisti
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
 
 # Let's compile by parts! Coz of ram issue!
-make sepolicy || echo no problem
-make bootimage || echo no problem
-make init || echo no problem
+make bacon
+#make sepolicy || echo no problem
+#make bootimage || echo no problem
+#make init || echo no problem
 #make api-stubs-docs || echo no problem
 #make system-api-stubs-docs || echo no problem
 #make test-api-stubs-docs || echo no problem
