@@ -50,6 +50,7 @@ make bacon
 #make sepolicy || echo no problem
 #make bootimage || echo no problem
 #make init || echo no problem
+
 #make api-stubs-docs || echo no problem
 #make system-api-stubs-docs || echo no problem
 #make test-api-stubs-docs || echo no problem
